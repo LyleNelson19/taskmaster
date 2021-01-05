@@ -22,29 +22,21 @@
     </header>
     <main>
         <div class="container-fluid">
-            <button onclick= "app.valuesController.createValue()" class="button ml-5 mt-5">Create</button>
-            
+            <form onsubmit="app.valuesController.createValue(event)">
+                <input type="text" name="body" placeholder="List Name">
+                <input type="text" name="body" placeholder="Color">
+                <button  class="button ml-5 mt-5" type="submit">Create</button>
+            </form>
             <div id="values"></div>
-                <div class="value">
-                    <div class="row ml-5 mr-5 mt-5" id="row1">
-                        <div class="col-3 mr-5" id="row1col1">
-                            <div class="text ml-5 mr-5 mt-3" id="title1"><h1>Title 1</h1></div>
-                        </div>
-                            
-                    </div>
-                    <div class="row ml-5 mr-5" id="row2">
-                        <div class="col-3 mr-5"id="row2col1"></div>
-                    </div>
-                </div> -->
-                <!-- <div class="col-3 mr-5"id= "row1col2">
-                    <div class="text ml-5 mr-5 mt-3" id="title2"><h1>Title 2</h1></div>
-                </div>
-                <div class="col-3"id="row1col3">
-                    <div class="text ml-5 mr-5 mt-3" id="title3"><h1>Title 3</h1></div>
-                </div> -->
-                <!-- <div class="col-3 mr-5"id="row2col2"></div>
-                <div class="col-3"id="row2col3"></div> -->
-        </div>     
+                
+                <div class="col-3 pt-3 mb-3">
+                    <div class="card h-100"><h1>Title</h1>
+                <div class="card-body"><h3>Task</h3>
+                <button onclick="app.postController.delete()">Delete</button>
+            
+    
+        
+                    
     </main>
     <footer class="container-fluid bg-dark text-light">
         <div class="row text-center">

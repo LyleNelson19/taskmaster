@@ -10694,33 +10694,7 @@ body {
 main {
   flex-grow: 1;
 }
-#row1 {
-  height: 100px;
-}
-  #row1col1 {
-    background-color: blue;
-  }
-  .text {
-    color: white;
-  }
-  #row1col2 {
-    background-color: rgb(255, 123, 0);
-  }
-  #row1col3 {
-    background-color: green;
-  }
-  #row2 {
-    height: 500px;
-  }
-  #row2col1 {
-  background-color: rgb(138, 138, 255);
-  }
-  #row2col2 {
-    background-color: rgb(255, 219, 153)
-    }
-  #row2col3 {
-    background-color: #86ff86
-    }
+
   /* background-color: red; */
 
 /*# sourceMappingURL=main.css.map */

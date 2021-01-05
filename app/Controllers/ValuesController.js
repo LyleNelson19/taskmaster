@@ -1,28 +1,28 @@
 // import { Button } from "bootstrap";
-// import { ProxyState } from "../AppState.js";
 
 
 // //Private
 // function _draw() {
-//   let values = ProxyState.values;
-//   let template = ''
-//   values.forEach(v => template += v.Template)
-//   document.getElementById("app").innerHTML = /*html*/`
-//   <button className="btn btn-info" onclick="app.valuesController.createList()">Create</button>  
-//   <div className="card-columns values">
-//       ${template}
-//   </div>
-//   `
-// }
-
-// Public
-
+  //   let values = ProxyState.values;
+  //   let template = ''
+  //   values.forEach(v => template += v.Template)
+  //   document.getElementById("app").innerHTML = /*html*/`
+  //   <button className="btn btn-info" onclick="app.valuesController.createList()">Create</button>  
+  //   <div className="card-columns values">
+  //       ${template}
+  //   </div>
+  //   `
+  // }
+  
+  // Public
+  
+import { ProxyState } from "../AppState.js";
 import ValuesService from "../Services/ValuesService.js" ;
-import store from "../store.js";
+
 
 
 function draw(){
-  let values = store.State.values;
+  let values = ProxyState.values;
   let templates = "";
   values.forEach(value => {
   templates += value.Template;
@@ -36,9 +36,17 @@ export default class ValuesController {
     draw();
   }
 
-createValue() {
-  console.log("Value Created");
-  ValuesService.createValue();
+createValue(event) {
+  event.preventDefault();
+  let formData = event.target;
+  let rawValue = {
+    body: formData.body.value
+  };
+  ValuesService.createValue(rawValue);
   draw();
   }
+
+delete (id) {
+console.log(id);
+}
 }
